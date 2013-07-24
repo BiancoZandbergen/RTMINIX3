@@ -9,12 +9,12 @@ public class Tracer {
     static int ruler = 0;
     static int maxEntries = 0;
 
-	public static void main(String args[]) {	
+    public static void main(String args[]) {    
 
 
-		Map <Integer,ProcEntry>procs = new HashMap<Integer,ProcEntry>();
-		LinkedList <LogEntry>entries = new LinkedList<LogEntry>();
-        	
+        Map <Integer,ProcEntry>procs = new HashMap<Integer,ProcEntry>();
+        LinkedList <LogEntry>entries = new LinkedList<LogEntry>();
+            
 
         for (String s: args) {
             parseArg(s);
@@ -25,39 +25,39 @@ public class Tracer {
             System.exit(-1);
         }
     
-		File f = new File(logFileName);
-		
-		if (!f.exists()) {
+        File f = new File(logFileName);
+        
+        if (!f.exists()) {
             System.out.println("Log file "+f.getAbsolutePath()+" does not exist!");
             System.exit(-1);
         }
-		
-		LogAnalyzer la = new LogAnalyzer(f, procs, entries, maxEntries);
-		la.analyze();
-		
-		System.out.println("found processes: "+Integer.toString(procs.size()) + "  found log entries: "+Integer.toString(entries.size()));
-		
-		GUI gui = new GUI(procs, entries, showTicks, ruler);
+        
+        LogAnalyzer la = new LogAnalyzer(f, procs, entries, maxEntries);
+        la.analyze();
+        
+        System.out.println("found processes: "+Integer.toString(procs.size()) + "  found log entries: "+Integer.toString(entries.size()));
+        
+        GUI gui = new GUI(procs, entries, showTicks, ruler);
     
         if (imageFileName != null) {
 
-    		/*try { Thread.sleep(5); } catch (Exception e) { }
+            /*try { Thread.sleep(5); } catch (Exception e) { }
     
-    		try {
-    			ScreenImage.createImage(gui.p, imageFileName);
-    		} catch (Exception e) { e.printStackTrace(); } 
+            try {
+                ScreenImage.createImage(gui.p, imageFileName);
+            } catch (Exception e) { e.printStackTrace(); } 
             
-            System.out.println("Created image: "+imageFileName); 		
-    		*/
-    		new ScreenshotThread(GUI.p, imageFileName).run();
-    	}
-    	
-    	try {
-    			while(true) Thread.sleep(1);
-    	}  catch (Exception e) { }
-	}
-	
-	private static void  parseArg(String s) {
+            System.out.println("Created image: "+imageFileName);         
+            */
+            new ScreenshotThread(GUI.p, imageFileName).run();
+        }
+        
+        try {
+                while(true) Thread.sleep(1);
+        }  catch (Exception e) { }
+    }
+    
+    private static void  parseArg(String s) {
         //System.out.print("Received arg: ");
         //System.out.print(s);
         //System.out.print("\n");
