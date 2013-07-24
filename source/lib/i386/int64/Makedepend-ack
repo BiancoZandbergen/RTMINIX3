@@ -1,0 +1,15 @@
+depend-ack:
+	rm .depend-ack
+	touch .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' add64.s | sed -e 's:^\(.\):../../obj-ack//./i386/int64/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' add64u.s | sed -e 's:^\(.\):../../obj-ack//./i386/int64/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' cmp64.s | sed -e 's:^\(.\):../../obj-ack//./i386/int64/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' cv64u.s | sed -e 's:^\(.\):../../obj-ack//./i386/int64/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' cvu64.s | sed -e 's:^\(.\):../../obj-ack//./i386/int64/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' diff64.s | sed -e 's:^\(.\):../../obj-ack//./i386/int64/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' div64u.s | sed -e 's:^\(.\):../../obj-ack//./i386/int64/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' ex64.s | sed -e 's:^\(.\):../../obj-ack//./i386/int64/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' make64.s | sed -e 's:^\(.\):../../obj-ack//./i386/int64/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' mul64u.s | sed -e 's:^\(.\):../../obj-ack//./i386/int64/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' sub64.s | sed -e 's:^\(.\):../../obj-ack//./i386/int64/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' sub64u.s | sed -e 's:^\(.\):../../obj-ack//./i386/int64/\1:' >> .depend-ack

@@ -1,0 +1,3 @@
+depend-gnu:
+	rm .depend-gnu
+	touch .depend-gnu

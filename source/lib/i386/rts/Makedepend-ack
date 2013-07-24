@@ -1,0 +1,10 @@
+depend-ack:
+	rm .depend-ack
+	touch .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' __sigreturn.s | sed -e 's:^\(.\):../../obj-ack//./i386/rts/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' _ipc.s | sed -e 's:^\(.\):../../obj-ack//./i386/rts/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' _ipcnew.s | sed -e 's:^\(.\):../../obj-ack//./i386/rts/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' brksize.s | sed -e 's:^\(.\):../../obj-ack//./i386/rts/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' crtso.s | sed -e 's:^\(.\):../../obj-ack/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' m2rtso.s | sed -e 's:^\(.\):../../obj-ack/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' prtso.s | sed -e 's:^\(.\):../../obj-ack/\1:' >> .depend-ack

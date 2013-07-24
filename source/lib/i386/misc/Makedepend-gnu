@@ -1,0 +1,20 @@
+depend-gnu:
+	rm .depend-gnu
+	touch .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' alloca.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/misc/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' get_bp.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/misc/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' getprocessor.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/misc/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' io_inb.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/misc/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' io_inl.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/misc/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' io_insb.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/misc/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' io_insl.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/misc/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' io_insw.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/misc/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' io_intr.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/misc/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' io_inw.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/misc/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' io_outb.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/misc/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' io_outl.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/misc/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' io_outsb.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/misc/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' io_outsl.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/misc/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' io_outsw.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/misc/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' io_outw.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/misc/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' oneC_sum.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/misc/\1:' >> .depend-gnu

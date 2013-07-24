@@ -1,0 +1,6 @@
+depend-ack:
+	rm .depend-ack
+	touch .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' tmrs_set.c | sed -e 's:^\(.\):../obj-ack//./timers/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' tmrs_clr.c | sed -e 's:^\(.\):../obj-ack//./timers/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' tmrs_exp.c | sed -e 's:^\(.\):../obj-ack//./timers/\1:' >> .depend-ack

@@ -1,0 +1,28 @@
+depend-gnu:
+	rm .depend-gnu
+	touch .depend-gnu
+	mkdep 'gcc  -E -x assembler-with-cpp -I.' _memmove.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/string/\1:' >> .depend-gnu
+	mkdep 'gcc  -E -x assembler-with-cpp -I.' _strncat.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/string/\1:' >> .depend-gnu
+	mkdep 'gcc  -E -x assembler-with-cpp -I.' _strncmp.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/string/\1:' >> .depend-gnu
+	mkdep 'gcc  -E -x assembler-with-cpp -I.' _strncpy.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/string/\1:' >> .depend-gnu
+	mkdep 'gcc  -E -x assembler-with-cpp -I.' _strnlen.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/string/\1:' >> .depend-gnu
+	mkdep 'gcc  -E -x assembler-with-cpp -I.' bcmp.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/string/\1:' >> .depend-gnu
+	mkdep 'gcc  -E -x assembler-with-cpp -I.' bcopy.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/string/\1:' >> .depend-gnu
+	mkdep 'gcc  -E -x assembler-with-cpp -I.' bzero.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/string/\1:' >> .depend-gnu
+	mkdep 'gcc  -E -x assembler-with-cpp -I.' index.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/string/\1:' >> .depend-gnu
+	mkdep 'gcc  -E -x assembler-with-cpp -I.' memchr.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/string/\1:' >> .depend-gnu
+	mkdep 'gcc  -E -x assembler-with-cpp -I.' memcmp.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/string/\1:' >> .depend-gnu
+	mkdep 'gcc  -E -x assembler-with-cpp -I.' memcpy.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/string/\1:' >> .depend-gnu
+	mkdep 'gcc  -E -x assembler-with-cpp -I.' memmove.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/string/\1:' >> .depend-gnu
+	mkdep 'gcc  -E -x assembler-with-cpp -I.' memset.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/string/\1:' >> .depend-gnu
+	mkdep 'gcc  -E -x assembler-with-cpp -I.' rindex.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/string/\1:' >> .depend-gnu
+	mkdep 'gcc  -E -x assembler-with-cpp -I.' strcat.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/string/\1:' >> .depend-gnu
+	mkdep 'gcc  -E -x assembler-with-cpp -I.' strchr.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/string/\1:' >> .depend-gnu
+	mkdep 'gcc  -E -x assembler-with-cpp -I.' strcmp.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/string/\1:' >> .depend-gnu
+	mkdep 'gcc  -E -x assembler-with-cpp -I.' strcpy.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/string/\1:' >> .depend-gnu
+	mkdep 'gcc  -E -x assembler-with-cpp -I.' strlen.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/string/\1:' >> .depend-gnu
+	mkdep 'gcc  -E -x assembler-with-cpp -I.' strncat.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/string/\1:' >> .depend-gnu
+	mkdep 'gcc  -E -x assembler-with-cpp -I.' strncmp.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/string/\1:' >> .depend-gnu
+	mkdep 'gcc  -E -x assembler-with-cpp -I.' strncpy.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/string/\1:' >> .depend-gnu
+	mkdep 'gcc  -E -x assembler-with-cpp -I.' strnlen.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/string/\1:' >> .depend-gnu
+	mkdep 'gcc  -E -x assembler-with-cpp -I.' strrchr.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/string/\1:' >> .depend-gnu

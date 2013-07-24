@@ -1,0 +1,11 @@
+depend-ack:
+	rm .depend-ack
+	touch .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' sem_m_create.c | sed -e 's:^\(.\):../obj-ack//./sem/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' sem_b_create.c | sed -e 's:^\(.\):../obj-ack//./sem/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' sem_c_create.c | sed -e 's:^\(.\):../obj-ack//./sem/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' sem_take.c | sed -e 's:^\(.\):../obj-ack//./sem/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' sem_give.c | sed -e 's:^\(.\):../obj-ack//./sem/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' sem_delete.c | sed -e 's:^\(.\):../obj-ack//./sem/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' sem_value.c | sed -e 's:^\(.\):../obj-ack//./sem/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' sem_flush.c | sed -e 's:^\(.\):../obj-ack//./sem/\1:' >> .depend-ack

@@ -1,0 +1,20 @@
+depend-ack:
+	rm .depend-ack
+	touch .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' alloca.s | sed -e 's:^\(.\):../../obj-ack//./i386/misc/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' get_bp.s | sed -e 's:^\(.\):../../obj-ack//./i386/misc/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' getprocessor.s | sed -e 's:^\(.\):../../obj-ack//./i386/misc/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' io_inb.s | sed -e 's:^\(.\):../../obj-ack//./i386/misc/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' io_inl.s | sed -e 's:^\(.\):../../obj-ack//./i386/misc/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' io_insb.s | sed -e 's:^\(.\):../../obj-ack//./i386/misc/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' io_insl.s | sed -e 's:^\(.\):../../obj-ack//./i386/misc/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' io_insw.s | sed -e 's:^\(.\):../../obj-ack//./i386/misc/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' io_intr.s | sed -e 's:^\(.\):../../obj-ack//./i386/misc/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' io_inw.s | sed -e 's:^\(.\):../../obj-ack//./i386/misc/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' io_outb.s | sed -e 's:^\(.\):../../obj-ack//./i386/misc/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' io_outl.s | sed -e 's:^\(.\):../../obj-ack//./i386/misc/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' io_outsb.s | sed -e 's:^\(.\):../../obj-ack//./i386/misc/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' io_outsl.s | sed -e 's:^\(.\):../../obj-ack//./i386/misc/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' io_outsw.s | sed -e 's:^\(.\):../../obj-ack//./i386/misc/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' io_outw.s | sed -e 's:^\(.\):../../obj-ack//./i386/misc/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' oneC_sum.s | sed -e 's:^\(.\):../../obj-ack//./i386/misc/\1:' >> .depend-ack

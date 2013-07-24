@@ -1,0 +1,20 @@
+depend-gnu:
+	rm .depend-gnu
+	touch .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' asin.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./math/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' atan.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./math/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' atan2.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./math/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' ceil.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./math/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' exp.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./math/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' fabs.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./math/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' floor.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./math/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' fmod.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./math/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' hugeval.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./math/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' log.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./math/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' log10.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./math/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' pow.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./math/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' sin.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./math/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' sinh.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./math/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' sqrt.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./math/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' tan.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./math/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' tanh.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./math/\1:' >> .depend-gnu

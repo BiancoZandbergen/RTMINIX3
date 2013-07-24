@@ -1,0 +1,41 @@
+depend-gnu:
+	rm .depend-gnu
+	touch .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' beep.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' charpick.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' curs_set.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' cursesio.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' endwin.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' flash.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' initscr.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' longname.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' move.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' mvcursor.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' newwin.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' options.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' overlay.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' prntscan.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' refresh.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' scrreg.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' setterm.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' tabsize.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' termmisc.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' unctrl.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' update.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' waddch.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' waddstr.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' wbox.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' wclear.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' wclrtobot.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' wclrtoeol.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' wdelch.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' wdeleteln.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' werase.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' wgetch.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' wgetstr.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' windel.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' winmove.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' winsch.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' winscrol.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' winsertln.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' wintouch.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./curses/\1:' >> .depend-gnu

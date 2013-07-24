@@ -1,0 +1,28 @@
+depend-ack:
+	rm .depend-ack
+	touch .depend-ack
+	mkdep 'cc  -E' _memmove.s | sed -e 's:^\(.\):../../obj-ack//./i386/string/\1:' >> .depend-ack
+	mkdep 'cc  -E' _strncat.s | sed -e 's:^\(.\):../../obj-ack//./i386/string/\1:' >> .depend-ack
+	mkdep 'cc  -E' _strncmp.s | sed -e 's:^\(.\):../../obj-ack//./i386/string/\1:' >> .depend-ack
+	mkdep 'cc  -E' _strncpy.s | sed -e 's:^\(.\):../../obj-ack//./i386/string/\1:' >> .depend-ack
+	mkdep 'cc  -E' _strnlen.s | sed -e 's:^\(.\):../../obj-ack//./i386/string/\1:' >> .depend-ack
+	mkdep 'cc  -E' bcmp.s | sed -e 's:^\(.\):../../obj-ack//./i386/string/\1:' >> .depend-ack
+	mkdep 'cc  -E' bcopy.s | sed -e 's:^\(.\):../../obj-ack//./i386/string/\1:' >> .depend-ack
+	mkdep 'cc  -E' bzero.s | sed -e 's:^\(.\):../../obj-ack//./i386/string/\1:' >> .depend-ack
+	mkdep 'cc  -E' index.s | sed -e 's:^\(.\):../../obj-ack//./i386/string/\1:' >> .depend-ack
+	mkdep 'cc  -E' memchr.s | sed -e 's:^\(.\):../../obj-ack//./i386/string/\1:' >> .depend-ack
+	mkdep 'cc  -E' memcmp.s | sed -e 's:^\(.\):../../obj-ack//./i386/string/\1:' >> .depend-ack
+	mkdep 'cc  -E' memcpy.s | sed -e 's:^\(.\):../../obj-ack//./i386/string/\1:' >> .depend-ack
+	mkdep 'cc  -E' memmove.s | sed -e 's:^\(.\):../../obj-ack//./i386/string/\1:' >> .depend-ack
+	mkdep 'cc  -E' memset.s | sed -e 's:^\(.\):../../obj-ack//./i386/string/\1:' >> .depend-ack
+	mkdep 'cc  -E' rindex.s | sed -e 's:^\(.\):../../obj-ack//./i386/string/\1:' >> .depend-ack
+	mkdep 'cc  -E' strcat.s | sed -e 's:^\(.\):../../obj-ack//./i386/string/\1:' >> .depend-ack
+	mkdep 'cc  -E' strchr.s | sed -e 's:^\(.\):../../obj-ack//./i386/string/\1:' >> .depend-ack
+	mkdep 'cc  -E' strcmp.s | sed -e 's:^\(.\):../../obj-ack//./i386/string/\1:' >> .depend-ack
+	mkdep 'cc  -E' strcpy.s | sed -e 's:^\(.\):../../obj-ack//./i386/string/\1:' >> .depend-ack
+	mkdep 'cc  -E' strlen.s | sed -e 's:^\(.\):../../obj-ack//./i386/string/\1:' >> .depend-ack
+	mkdep 'cc  -E' strncat.s | sed -e 's:^\(.\):../../obj-ack//./i386/string/\1:' >> .depend-ack
+	mkdep 'cc  -E' strncmp.s | sed -e 's:^\(.\):../../obj-ack//./i386/string/\1:' >> .depend-ack
+	mkdep 'cc  -E' strncpy.s | sed -e 's:^\(.\):../../obj-ack//./i386/string/\1:' >> .depend-ack
+	mkdep 'cc  -E' strnlen.s | sed -e 's:^\(.\):../../obj-ack//./i386/string/\1:' >> .depend-ack
+	mkdep 'cc  -E' strrchr.s | sed -e 's:^\(.\):../../obj-ack//./i386/string/\1:' >> .depend-ack

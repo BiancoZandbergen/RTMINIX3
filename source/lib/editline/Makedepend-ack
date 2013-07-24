@@ -1,0 +1,6 @@
+depend-ack:
+	rm .depend-ack
+	touch .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -DANSI_ARROWS -DHAVE_STDLIB -DHAVE_TCGETATTR -DHIDE -DUSE_DIRENT 	-DHIST_SIZE=100 -DUSE_TERMCAP -DSYS_UNIX -wo -E' editline.c | sed -e 's:^\(.\):../obj-ack//./editline/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -DANSI_ARROWS -DHAVE_STDLIB -DHAVE_TCGETATTR -DHIDE -DUSE_DIRENT 	-DHIST_SIZE=100 -DUSE_TERMCAP -DSYS_UNIX -wo -E' complete.c | sed -e 's:^\(.\):../obj-ack//./editline/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -DANSI_ARROWS -DHAVE_STDLIB -DHAVE_TCGETATTR -DHIDE -DUSE_DIRENT 	-DHIST_SIZE=100 -DUSE_TERMCAP -DSYS_UNIX -wo -E' sysunix.c | sed -e 's:^\(.\):../obj-ack//./editline/\1:' >> .depend-ack

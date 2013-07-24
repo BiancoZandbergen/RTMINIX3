@@ -1,0 +1,10 @@
+depend-gnu:
+	rm .depend-gnu
+	touch .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' __sigreturn.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/rts/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' _ipc.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/rts/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' _ipcnew.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/rts/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' brksize.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/rts/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' crtso.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' m2rtso.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' prtso.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/\1:' >> .depend-gnu

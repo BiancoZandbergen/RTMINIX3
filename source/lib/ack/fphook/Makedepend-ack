@@ -1,0 +1,6 @@
+depend-ack:
+	rm .depend-ack
+	touch .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -I.. -E' fphook.c | sed -e 's:^\(.\):../../obj-ack//./ack/fphook/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -I.. -E' fltpr.c | sed -e 's:^\(.\):../../obj-ack//./ack/fphook/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -I.. -E' strtod.c | sed -e 's:^\(.\):../../obj-ack//./ack/fphook/\1:' >> .depend-ack

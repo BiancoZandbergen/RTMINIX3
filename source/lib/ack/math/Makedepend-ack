@@ -1,0 +1,7 @@
+depend-ack:
+	rm .depend-ack
+	touch .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' frexp.s | sed -e 's:^\(.\):../../obj-ack//./ack/math/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' modf.s | sed -e 's:^\(.\):../../obj-ack//./ack/math/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' isnan.c | sed -e 's:^\(.\):../../obj-ack//./ack/math/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' ldexp.c | sed -e 's:^\(.\):../../obj-ack//./ack/math/\1:' >> .depend-ack

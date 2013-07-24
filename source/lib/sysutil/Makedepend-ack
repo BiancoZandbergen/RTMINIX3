@@ -1,0 +1,15 @@
+depend-ack:
+	rm .depend-ack
+	touch .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' kmalloc.c | sed -e 's:^\(.\):../obj-ack//./sysutil/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' kprintf.c | sed -e 's:^\(.\):../obj-ack//./sysutil/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' kputc.c | sed -e 's:^\(.\):../obj-ack//./sysutil/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' tickdelay.c | sed -e 's:^\(.\):../obj-ack//./sysutil/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' getuptime.c | sed -e 's:^\(.\):../obj-ack//./sysutil/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' env_get_prm.c | sed -e 's:^\(.\):../obj-ack//./sysutil/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' env_parse.c | sed -e 's:^\(.\):../obj-ack//./sysutil/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' env_panic.c | sed -e 's:^\(.\):../obj-ack//./sysutil/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' env_prefix.c | sed -e 's:^\(.\):../obj-ack//./sysutil/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' fkey_ctl.c | sed -e 's:^\(.\):../obj-ack//./sysutil/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' report.c | sed -e 's:^\(.\):../obj-ack//./sysutil/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' taskcall.c | sed -e 's:^\(.\):../obj-ack//./sysutil/\1:' >> .depend-ack

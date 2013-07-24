@@ -1,0 +1,20 @@
+depend-ack:
+	rm .depend-ack
+	touch .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' asin.c | sed -e 's:^\(.\):../obj-ack//./math/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' atan.c | sed -e 's:^\(.\):../obj-ack//./math/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' atan2.c | sed -e 's:^\(.\):../obj-ack//./math/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' ceil.c | sed -e 's:^\(.\):../obj-ack//./math/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' exp.c | sed -e 's:^\(.\):../obj-ack//./math/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' fabs.c | sed -e 's:^\(.\):../obj-ack//./math/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' floor.c | sed -e 's:^\(.\):../obj-ack//./math/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' fmod.c | sed -e 's:^\(.\):../obj-ack//./math/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' hugeval.c | sed -e 's:^\(.\):../obj-ack//./math/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' log.c | sed -e 's:^\(.\):../obj-ack//./math/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' log10.c | sed -e 's:^\(.\):../obj-ack//./math/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' pow.c | sed -e 's:^\(.\):../obj-ack//./math/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' sin.c | sed -e 's:^\(.\):../obj-ack//./math/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' sinh.c | sed -e 's:^\(.\):../obj-ack//./math/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' sqrt.c | sed -e 's:^\(.\):../obj-ack//./math/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' tan.c | sed -e 's:^\(.\):../obj-ack//./math/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' tanh.c | sed -e 's:^\(.\):../obj-ack//./math/\1:' >> .depend-ack

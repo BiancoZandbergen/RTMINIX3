@@ -1,0 +1,15 @@
+depend-gnu:
+	rm .depend-gnu
+	touch .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' add64.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/int64/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' add64u.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/int64/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' cmp64.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/int64/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' cv64u.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/int64/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' cvu64.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/int64/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' diff64.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/int64/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' div64u.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/int64/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' ex64.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/int64/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' make64.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/int64/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' mul64u.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/int64/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' sub64.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/int64/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E -x assembler-with-cpp -I.' sub64u.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./i386/int64/\1:' >> .depend-gnu

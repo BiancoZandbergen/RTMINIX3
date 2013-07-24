@@ -1,0 +1,6 @@
+depend-gnu:
+	rm .depend-gnu
+	touch .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' tmrs_set.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./timers/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' tmrs_clr.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./timers/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' tmrs_exp.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./timers/\1:' >> .depend-gnu

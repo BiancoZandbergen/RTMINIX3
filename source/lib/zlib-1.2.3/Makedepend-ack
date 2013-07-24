@@ -1,0 +1,15 @@
+depend-ack:
+	rm .depend-ack
+	touch .depend-ack
+	mkdep 'cc -O -E' adler32.c | sed -e 's:^\(.\):../obj-ack//./zlib-1.2.3/\1:' >> .depend-ack
+	mkdep 'cc -O -E' compress.c | sed -e 's:^\(.\):../obj-ack//./zlib-1.2.3/\1:' >> .depend-ack
+	mkdep 'cc -O -E' crc32.c | sed -e 's:^\(.\):../obj-ack//./zlib-1.2.3/\1:' >> .depend-ack
+	mkdep 'cc -O -E' gzio.c | sed -e 's:^\(.\):../obj-ack//./zlib-1.2.3/\1:' >> .depend-ack
+	mkdep 'cc -O -E' uncompr.c | sed -e 's:^\(.\):../obj-ack//./zlib-1.2.3/\1:' >> .depend-ack
+	mkdep 'cc -O -E' deflate.c | sed -e 's:^\(.\):../obj-ack//./zlib-1.2.3/\1:' >> .depend-ack
+	mkdep 'cc -O -E' trees.c | sed -e 's:^\(.\):../obj-ack//./zlib-1.2.3/\1:' >> .depend-ack
+	mkdep 'cc -O -E' zutil.c | sed -e 's:^\(.\):../obj-ack//./zlib-1.2.3/\1:' >> .depend-ack
+	mkdep 'cc -O -E' inflate.c | sed -e 's:^\(.\):../obj-ack//./zlib-1.2.3/\1:' >> .depend-ack
+	mkdep 'cc -O -E' infback.c | sed -e 's:^\(.\):../obj-ack//./zlib-1.2.3/\1:' >> .depend-ack
+	mkdep 'cc -O -E' inftrees.c | sed -e 's:^\(.\):../obj-ack//./zlib-1.2.3/\1:' >> .depend-ack
+	mkdep 'cc -O -E' inffast.c | sed -e 's:^\(.\):../obj-ack//./zlib-1.2.3/\1:' >> .depend-ack

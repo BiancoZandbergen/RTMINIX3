@@ -1,0 +1,7 @@
+depend-gnu:
+	rm .depend-gnu
+	touch .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' regcomp.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./regex/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' regerror.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./regex/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' regexec.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./regex/\1:' >> .depend-gnu
+	mkdep 'gcc -O -D_MINIX -D_POSIX_SOURCE -E' regfree.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./regex/\1:' >> .depend-gnu

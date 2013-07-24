@@ -1,0 +1,7 @@
+depend-ack:
+	rm .depend-ack
+	touch .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' regcomp.c | sed -e 's:^\(.\):../obj-ack//./regex/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' regerror.c | sed -e 's:^\(.\):../obj-ack//./regex/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' regexec.c | sed -e 's:^\(.\):../obj-ack//./regex/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' regfree.c | sed -e 's:^\(.\):../obj-ack//./regex/\1:' >> .depend-ack

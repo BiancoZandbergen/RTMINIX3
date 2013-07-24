@@ -1,0 +1,4 @@
+depend-gnu:
+	rm .depend-gnu
+	touch .depend-gnu
+	mkdep 'gcc  -E -x assembler-with-cpp -I.' gnu_end.gs | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../../obj-gnu/./gnu/end/\1:' >> .depend-gnu

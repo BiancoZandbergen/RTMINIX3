@@ -1,0 +1,7 @@
+depend-gnu:
+	rm .depend-gnu
+	touch .depend-gnu
+	mkdep 'gcc  -E -x assembler-with-cpp -I.' edata.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./end/\1:' >> .depend-gnu
+	mkdep 'gcc  -E -x assembler-with-cpp -I.' em_end.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./end/\1:' >> .depend-gnu
+	mkdep 'gcc  -E -x assembler-with-cpp -I.' end.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./end/\1:' >> .depend-gnu
+	mkdep 'gcc  -E -x assembler-with-cpp -I.' etext.s | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./end/\1:' >> .depend-gnu

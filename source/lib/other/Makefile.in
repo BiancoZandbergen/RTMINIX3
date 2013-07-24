@@ -1,0 +1,85 @@
+# Makefile for lib/other.
+
+CFLAGS="-O -D_MINIX -D_POSIX_SOURCE -I../../servers"
+
+LIBRARIES=libc
+
+libc_FILES=" \
+	_allocmem.c \
+	_brk.c \
+	_devctl.c \
+	__pm_findproc.c \
+	_freemem.c \
+	_getnpid.c \
+	_getsigset.c \
+	_getnprocnr.c \
+	_getpprocnr.c \
+	_getprocnr.c \
+	_getsysinfo.c \
+	_reboot.c \
+	_seekdir.c \
+	_svrctl.c \
+	asynchio.c \
+	basename.c \
+	bcmp.c \
+	bcopy.c \
+	bzero.c \
+	configfile.c \
+	crypt.c \
+	ctermid.c \
+	cuserid.c \
+	environ.c \
+	errno.c \
+	fdopen.c \
+	ffs.c \
+	flock.c \
+	fslib.c \
+	fts.c \
+	fsversion.c \
+	getgrent.c \
+	getlogin.c \
+	getpagesize.c \
+	getpass.c \
+	getpwent.c \
+	getttyent.c \
+	getw.c \
+	hypot.c \
+	index.c \
+	itoa.c \
+	loadname.c \
+	lock.c \
+	lrand.c \
+	lsearch.c \
+	memccpy.c \
+	mstats.c \
+	mtab.c \
+	nlist.c \
+	paramvalue.c \
+	peekpoke.c \
+	popen.c \
+	putenv.c \
+	putw.c \
+	random.c \
+	rindex.c \
+	setenv.c \
+	setgroups.c \
+	settimeofday.c \
+	stderr.c \
+	strdup.c \
+	strtok_r.c \
+	swab.c \
+	sys_eniop.c \
+	syscall.c \
+	sysconf.c \
+	syslog.c \
+	taskcall.c \
+	telldir.c \
+	termcap.c \
+	ttyname.c \
+	ttyslot.c \
+	v8regerror.c \
+	v8regexp.c \
+	v8regsub.c \
+	writev.c"
+
+TYPE=both

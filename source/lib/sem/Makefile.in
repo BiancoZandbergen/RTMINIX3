@@ -1,0 +1,12 @@
+#Makefile for lib/sem (libsem)
+CFLAGS="-O -D_MINIX -D_POSIX_SOURCE"
+LIBRARIES=libsem
+libsem_FILES="sem_m_create.c \
+			  sem_b_create.c \
+			  sem_c_create.c \
+			  sem_take.c \
+			  sem_give.c \
+			  sem_delete.c \
+			  sem_value.c \
+			  sem_flush.c"  
+TYPE=both

@@ -1,0 +1,9 @@
+depend-ack:
+	rm .depend-ack
+	touch .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' rt_set_sched_edf.c | sed -e 's:^\(.\):../obj-ack//./rtminix3/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' rt_set_sched_rm.c | sed -e 's:^\(.\):../obj-ack//./rtminix3/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' rt_set_edf.c | sed -e 's:^\(.\):../obj-ack//./rtminix3/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' rt_set_rm.c | sed -e 's:^\(.\):../obj-ack//./rtminix3/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' rt_nextperiod.c | sed -e 's:^\(.\):../obj-ack//./rtminix3/\1:' >> .depend-ack
+	mkdep 'cc -O -D_MINIX -D_POSIX_SOURCE -E' rt_set_sched_bridge.c | sed -e 's:^\(.\):../obj-ack//./rtminix3/\1:' >> .depend-ack

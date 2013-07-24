@@ -1,0 +1,41 @@
+depend-ack:
+	rm .depend-ack
+	touch .depend-ack
+	mkdep 'cc -E' add_ext.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' adder.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' adf4.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' adf8.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' cff4.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' cff8.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' cfi.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' cfu.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' cif4.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' cif8.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' cmf4.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' cmf8.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' compact.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' cuf4.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' cuf8.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' div_ext.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' dvf4.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' dvf8.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' extend.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' fef4.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' fef8.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' fif4.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' fif8.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc  -E' fptrp.s | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' mlf4.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' mlf8.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' mul_ext.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' ngf4.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' ngf8.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' nrm_ext.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' sbf4.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' sbf8.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' sft_ext.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' shifter.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' sub_ext.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' zrf4.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' zrf8.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack
+	mkdep 'cc -E' zrf_ext.fc | sed -e 's:^\(.\):../../obj-ack//./ack/float/\1:' >> .depend-ack

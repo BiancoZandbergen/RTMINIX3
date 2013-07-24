@@ -1,0 +1,15 @@
+depend-gnu:
+	rm .depend-gnu
+	touch .depend-gnu
+	mkdep 'gcc -O -E' adler32.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./zlib-1.2.3/\1:' >> .depend-gnu
+	mkdep 'gcc -O -E' compress.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./zlib-1.2.3/\1:' >> .depend-gnu
+	mkdep 'gcc -O -E' crc32.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./zlib-1.2.3/\1:' >> .depend-gnu
+	mkdep 'gcc -O -E' gzio.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./zlib-1.2.3/\1:' >> .depend-gnu
+	mkdep 'gcc -O -E' uncompr.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./zlib-1.2.3/\1:' >> .depend-gnu
+	mkdep 'gcc -O -E' deflate.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./zlib-1.2.3/\1:' >> .depend-gnu
+	mkdep 'gcc -O -E' trees.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./zlib-1.2.3/\1:' >> .depend-gnu
+	mkdep 'gcc -O -E' zutil.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./zlib-1.2.3/\1:' >> .depend-gnu
+	mkdep 'gcc -O -E' inflate.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./zlib-1.2.3/\1:' >> .depend-gnu
+	mkdep 'gcc -O -E' infback.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./zlib-1.2.3/\1:' >> .depend-gnu
+	mkdep 'gcc -O -E' inftrees.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./zlib-1.2.3/\1:' >> .depend-gnu
+	mkdep 'gcc -O -E' inffast.c | sed -e '/<built-in>/d' -e '/<command line>/d' -e 's:^\(.\):../obj-gnu/./zlib-1.2.3/\1:' >> .depend-gnu

@@ -1,0 +1,7 @@
+depend-ack:
+	rm .depend-ack
+	touch .depend-ack
+	mkdep 'cc  -E' edata.s | sed -e 's:^\(.\):../obj-ack//./end/\1:' >> .depend-ack
+	mkdep 'cc  -E' em_end.s | sed -e 's:^\(.\):../obj-ack//./end/\1:' >> .depend-ack
+	mkdep 'cc  -E' end.s | sed -e 's:^\(.\):../obj-ack//./end/\1:' >> .depend-ack
+	mkdep 'cc  -E' etext.s | sed -e 's:^\(.\):../obj-ack//./end/\1:' >> .depend-ack

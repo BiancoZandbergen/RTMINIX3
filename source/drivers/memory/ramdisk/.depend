@@ -1,0 +1,11 @@
+
+bintoc.o:	/usr/include/ansi.h
+bintoc.o:	/usr/include/errno.h
+bintoc.o:	/usr/include/stdarg.h
+bintoc.o:	/usr/include/stdio.h
+bintoc.o:	/usr/include/stdlib.h
+bintoc.o:	/usr/include/string.h
+bintoc.o:	/usr/include/sys/dir.h
+bintoc.o:	/usr/include/sys/types.h
+bintoc.o:	/usr/include/unistd.h
+bintoc.o:	bintoc.c

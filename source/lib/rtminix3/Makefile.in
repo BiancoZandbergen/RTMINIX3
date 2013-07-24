@@ -1,0 +1,10 @@
+#Makefile for lib/rtminix3 (librt)
+CFLAGS="-O -D_MINIX -D_POSIX_SOURCE"
+LIBRARIES=librt
+librt_FILES="rt_set_sched_edf.c \
+			 rt_set_sched_rm.c \
+			 rt_set_edf.c \
+			 rt_set_rm.c \
+			 rt_nextperiod.c \
+			 rt_set_sched_bridge.c" 
+TYPE=both

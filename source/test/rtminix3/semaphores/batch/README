@@ -1,0 +1,22 @@
+This file describes the tests that are done to test the semaphore server.
+
+test1: Testing the creation of a mutex semaphore under normal conditions.
+test2: Testing the creation of binary semaphore under normal conditions.
+test3: Testing the creation of counting semaphores under normal conditions.
+test4: Testing the creation of a semaphore with invalid type.
+test5: Testing the creation of a binary semaphore with invalid value parameters.
+test6: Testing the creation of a counting semaphore with invalid value parameter.
+test7: Testing the creation of a counting semaphore with invalid size parameter.
+test8: Testing sem_take() with invalid semaphore handler.
+test9: Testing sem_take() with mutex under normal conditions with NO_WAIT.
+test10: Testing sem_take() with binary semaphore under normal conditions with NO_WAIT.
+test11: Testing non-blocking sem_take() with counting sem under normal conditions.
+test12: Testing sem_give() with mutex under normal conditions.
+test13: Testing sem_give() with binary sem under normal conditions.
+test14: Testing sem_give() with counting sem under normal conditions.
+test15: Testing sem_give() with invalid semaphore handler.
+test16: Testing sem_give() with mutex while sem is not taken.
+test17: Testing sem_give() with binary sem while sem is not taken.
+test18: Testing sem_give() with counting sem while sem is not taken.
+test19: Testing sem_give() of taken mutex with wrong user.
+
