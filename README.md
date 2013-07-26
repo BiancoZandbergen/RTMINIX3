@@ -1,6 +1,6 @@
-RTMINIX3
-========
 ![Minix 3 Logo](http://biancozandbergen.github.io/images/rtminix3_1.jpg "Minix 3 Logo")
+#RTMINIX3
+
 
 Official website: www.rtminix3.org
 
